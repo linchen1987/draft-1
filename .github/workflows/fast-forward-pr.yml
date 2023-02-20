@@ -1,0 +1,14 @@
+name: version-check-for-npm
+env:
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+
+on:
+  pull_request:
+    branches:
+      - release
+
+jobs:
+  Fast Forward PR:
+    steps:
+      - name: Fast Forward PR
+        uses: endre-spotlab/fast-forward-js-action@2.1
